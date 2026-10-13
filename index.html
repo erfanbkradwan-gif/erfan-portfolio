@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Erfan Ahmed Mohamed AHMED — AI & Data Science Student, Computer Vision and Software Engineering." />
+  <title>Erfan Ahmed Mohamed Ahmed | AI & Data Science</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#070b12; --bg2:#0b111b; --card:rgba(15,23,36,.72);
+      --line:rgba(148,163,184,.16); --text:#f4f7fb; --muted:#9aa8bb;
+      --accent:#65e6ff; --accent2:#8b7cff; --success:#67e8a5;
+      --shadow:0 24px 80px rgba(0,0,0,.35); --radius:24px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Inter,system-ui,sans-serif;background:radial-gradient(circle at 80% 10%,rgba(101,230,255,.10),transparent 28%),radial-gradient(circle at 10% 40%,rgba(139,124,255,.08),transparent 28%),var(--bg);color:var(--text);line-height:1.65;overflow-x:hidden}
+    body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.24;background-image:linear-gradient(rgba(255,255,255,.018) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px);background-size:42px 42px;mask-image:linear-gradient(to bottom,black,transparent 85%);z-index:-1}
+    a{text-decoration:none;color:inherit}
+    .container{width:min(1120px,92%);margin:auto}
+    .nav{position:fixed;top:16px;left:0;right:0;z-index:20}
+    .nav-inner{height:64px;border:1px solid var(--line);background:rgba(7,11,18,.72);backdrop-filter:blur(18px);border-radius:18px;display:flex;align-items:center;justify-content:space-between;padding:0 20px;box-shadow:var(--shadow)}
+    .brand{font-family:"Space Grotesk";font-weight:700;font-size:18px}.brand span{color:var(--accent)}
+    .links{display:flex;gap:25px;color:#b7c1cf;font-size:14px}.links a{transition:.25s}.links a:hover{color:var(--accent)}
+    .menu{display:none;background:none;border:0;color:white;font-size:24px}
+    section{padding:105px 0}.hero{min-height:100vh;display:flex;align-items:center;padding-top:135px}
+    .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:70px;align-items:center}
+    .eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--accent);font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:20px}
+    .dot{width:8px;height:8px;border-radius:50%;background:var(--success);box-shadow:0 0 16px var(--success)}
+    h1{font-family:"Space Grotesk";font-size:clamp(46px,7vw,78px);line-height:1.02;letter-spacing:-.055em;max-width:760px}
+    .gradient{background:linear-gradient(100deg,#fff 20%,var(--accent) 65%,#a99fff);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .hero p{color:var(--muted);font-size:18px;max-width:650px;margin:24px 0 32px}
+    .buttons{display:flex;gap:13px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;gap:9px;padding:13px 18px;border-radius:13px;border:1px solid var(--line);font-weight:700;font-size:14px;transition:.25s}
+    .btn.primary{background:linear-gradient(135deg,var(--accent),#8cf1ff);color:#061018;border:none}.btn:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(101,230,255,.13)}
+    .hero-card{position:relative;border:1px solid var(--line);background:linear-gradient(145deg,rgba(16,27,43,.9),rgba(9,14,23,.72));border-radius:30px;padding:30px;box-shadow:var(--shadow);overflow:hidden}
+    .hero-card:before{content:"";position:absolute;width:180px;height:180px;background:var(--accent);filter:blur(90px);opacity:.16;right:-60px;top:-60px}
+    .terminal{border:1px solid var(--line);border-radius:18px;background:#070b11;overflow:hidden}.term-head{padding:11px 14px;border-bottom:1px solid var(--line);display:flex;gap:6px}.circle{width:8px;height:8px;border-radius:50%;background:#566274}
+    .term-body{padding:22px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px;color:#aebbc9}.cyan{color:var(--accent)}.purple{color:#a99fff}.green{color:var(--success)}
+    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:18px}.stat{padding:15px;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.025)}.stat strong{font-size:22px;display:block}.stat span{font-size:11px;color:var(--muted)}
+    .section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:45px}.kicker{color:var(--accent);font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.15em}.section-head h2{font-family:"Space Grotesk";font-size:clamp(32px,4vw,48px);letter-spacing:-.04em;margin-top:8px}.section-head p{color:var(--muted);max-width:480px;font-size:14px}
+    .about{display:grid;grid-template-columns:1fr 1fr;gap:24px}.panel{border:1px solid var(--line);border-radius:var(--radius);background:var(--card);padding:30px;backdrop-filter:blur(14px)}.panel p{color:var(--muted);margin-top:15px}.quote{border-left:2px solid var(--accent);padding-left:18px;color:#d8e2ed;margin-top:25px}
+    .skills{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.skill{padding:23px;border:1px solid var(--line);border-radius:20px;background:rgba(255,255,255,.025);transition:.25s}.skill:hover{transform:translateY(-5px);border-color:rgba(101,230,255,.35)}.skill-icon{font-size:22px;margin-bottom:15px}.skill h3{font-size:15px;margin-bottom:9px}.skill p{font-size:13px;color:var(--muted)}
+    .projects{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.project{border:1px solid var(--line);border-radius:26px;background:linear-gradient(145deg,rgba(18,29,45,.82),rgba(9,14,22,.8));padding:28px;min-height:300px;display:flex;flex-direction:column;transition:.3s;position:relative;overflow:hidden}.project:hover{transform:translateY(-7px);border-color:rgba(101,230,255,.32);box-shadow:0 20px 60px rgba(0,0,0,.25)}.project.featured{grid-column:span 2}.project:after{content:"";position:absolute;width:150px;height:150px;background:var(--accent);filter:blur(90px);opacity:.08;right:-70px;top:-70px}.tag{font-size:11px;color:var(--accent);text-transform:uppercase;letter-spacing:.12em;font-weight:800}.project h3{font-family:"Space Grotesk";font-size:25px;margin:12px 0}.project p{color:var(--muted);font-size:14px;max-width:720px}.project ul{margin:17px 0 20px;padding-left:18px;color:#b7c3d2;font-size:13px}.project li{margin:5px 0}.project-bottom{margin-top:auto;display:flex;justify-content:space-between;align-items:center;gap:10px}.chips{display:flex;gap:7px;flex-wrap:wrap}.chip{font-size:10px;padding:6px 9px;border-radius:999px;background:rgba(101,230,255,.08);border:1px solid rgba(101,230,255,.13);color:#bceefa}
+    .timeline{display:grid;grid-template-columns:1fr 1fr;gap:18px}.timeline-card{border:1px solid var(--line);padding:26px;border-radius:22px;background:var(--card)}.timeline-card small{color:var(--accent)}.timeline-card h3{margin:8px 0 5px}.timeline-card p{font-size:13px;color:var(--muted)}
+    .contact{display:grid;grid-template-columns:1fr .9fr;gap:24px}.contact-main{padding:38px;border-radius:28px;border:1px solid var(--line);background:linear-gradient(135deg,rgba(101,230,255,.08),rgba(139,124,255,.07));}.contact-main h2{font-family:"Space Grotesk";font-size:clamp(34px,5vw,55px);line-height:1.05}.contact-main p{color:var(--muted);margin:18px 0 28px}.contact-list{display:grid;gap:11px}.contact-item{padding:16px;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.025);font-size:14px}.contact-item span{color:var(--muted);display:block;font-size:11px;margin-bottom:2px}.footer{border-top:1px solid var(--line);padding:25px 0;color:#718096;font-size:12px}.footer-inner{display:flex;justify-content:space-between;gap:20px}
+    .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}.reveal.visible{opacity:1;transform:none}
+    @media(max-width:900px){.hero-grid,.about,.contact{grid-template-columns:1fr}.hero-card{max-width:650px}.skills{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:700px){section{padding:80px 0}.links{display:none}.menu{display:block}.links.open{display:flex;position:absolute;top:72px;left:0;right:0;flex-direction:column;background:rgba(7,11,18,.97);padding:20px;border:1px solid var(--line);border-radius:18px}.hero{padding-top:120px}.projects,.timeline{grid-template-columns:1fr}.project.featured{grid-column:auto}.section-head{display:block}.section-head p{margin-top:15px}.stats{grid-template-columns:1fr 1fr 1fr}h1{font-size:48px}.footer-inner{flex-direction:column}}
+    @media(max-width:430px){.skills{grid-template-columns:1fr}.stats{grid-template-columns:1fr}.hero-card{padding:18px}.panel,.project,.contact-main{padding:23px}}
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="#home">ERFAN AHMED MOHAMED AHMED<span></span></a>
+      <div class="links" id="navLinks">
+        <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#education">Education</a><a href="#contact">Contact</a>
+      </div>
+      <button class="menu" id="menuBtn" aria-label="Open menu">☰</button>
+    </div>
+  </nav>
+
+  <main id="home">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="reveal">
+          <div class="eyebrow"><span class="dot"></span> Available for internships & opportunities</div>
+          <h1>Building intelligent systems for <span class="gradient">real-world problems.</span></h1>
+          <p>AI & Data Science student focused on Artificial Intelligence, Computer Vision, Software Engineering, and practical software solutions.</p>
+          <div class="buttons">
+            <a class="btn primary" href="#projects">Explore Projects ↗</a>
+            <a class="btn" href="Erfan_Ahmed_CV.pdf" download>Download CV ↓</a>
+          </div>
+        </div>
+        <div class="hero-card reveal">
+          <div class="terminal">
+            <div class="term-head"><span class="circle"></span><span class="circle"></span><span class="circle"></span></div>
+            <div class="term-body">
+              <div><span class="purple">const</span> developer = {</div>
+              <br>
+              <div>&nbsp;&nbsp;name: <span class="cyan">'Erfan Ahmed'</span>,</div>
+              <div>&nbsp;&nbsp;focus: <span class="cyan">'AI & Software'</span>,</div>
+              <div>&nbsp;&nbsp;languages: [<span class="cyan">'Python'</span>, <span class="cyan">'C++'</span>],</div>
+              <div>&nbsp;&nbsp;interests: [</div>
+              <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="green">'Computer Vision'</span>,</div>
+              <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="green">'Machine Learning'</span>,</div>
+              <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="green">'Backend Development'</span></div>
+              <div>&nbsp;&nbsp;]</div>
+              <div>};</div>
+            </div>
+          </div>
+          <div class="stats">
+            <div class="stat"><strong>3.5</strong><span>GPA / 4.0</span></div>
+            <div class="stat"><strong>AI</strong><span>Primary Field</span></div>
+            <div class="stat"><strong>3rd</strong><span>Year Student</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="section-head reveal"><div><div class="kicker">01 / About</div><h2>A developer who likes to build.</h2></div><p>From system requirements and databases to intelligent features and usable software.</p></div>
+        <div class="about">
+          <div class="panel reveal">
+            <h3>Who I am</h3>
+            <p>I am a third-year Artificial Intelligence student at Zagazig University with a GPA of 3.5/4.0.</p>
+            <p>My interests span Artificial Intelligence, Machine Learning, Computer Vision, Backend Development, Database Systems, and Software Engineering.</p>
+            <p>I enjoy turning ideas into functional systems and learning through practical, real-world projects.</p>
+          </div>
+          <div class="panel reveal">
+            <h3>What I bring</h3>
+            <p>Strong foundations in Python, C++, Object-Oriented Programming, Data Structures, Algorithms, SQL, and data processing.</p>
+            <div class="quote">“I focus on understanding the problem first, then building the simplest reliable solution that can grow.”</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="container">
+        <div class="section-head reveal"><div><div class="kicker">02 / Skills</div><h2>Technical toolkit.</h2></div><p>A focused set of technologies and fundamentals I use to build software and AI projects.</p></div>
+        <div class="skills">
+          <div class="skill reveal"><div class="skill-icon">◈</div><h3>AI & Machine Learning</h3><p>Machine Learning, AI concepts, data processing and intelligent systems.</p></div>
+          <div class="skill reveal"><div class="skill-icon">◉</div><h3>Computer Vision</h3><p>Computer-vision focused problem solving and driver-monitoring concepts.</p></div>
+          <div class="skill reveal"><div class="skill-icon">⌘</div><h3>Programming</h3><p>Python, C++, Java and Object-Oriented Programming.</p></div>
+          <div class="skill reveal"><div class="skill-icon">▦</div><h3>Databases & SQL</h3><p>Database design, data management, SQL and structured data systems.</p></div>
+          <div class="skill reveal"><div class="skill-icon">⚙</div><h3>Software Engineering</h3><p>System analysis, architecture, documentation, backend development and tool integration.</p></div>
+          <div class="skill reveal"><div class="skill-icon">⌁</div><h3>Algorithms</h3><p>Data Structures, Algorithms and problem-solving fundamentals.</p></div>
+          <div class="skill reveal"><div class="skill-icon">▤</div><h3>Data Analysis</h3><p>Data processing and analysis using Microsoft Excel and related fundamentals.</p></div>
+          <div class="skill reveal"><div class="skill-icon">◌</div><h3>Professional Skills</h3><p>Teamwork, communication, adaptability, time management and fast learning.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="container">
+        <div class="section-head reveal"><div><div class="kicker">03 / Selected Work</div><h2>Projects with purpose.</h2></div><p>Projects that connect software engineering with practical problems.</p></div>
+        <div class="projects">
+          <article class="project featured reveal">
+            <div class="tag">Featured · AI / Computer Vision</div>
+            <h3>Driver Safety & Attention Monitoring System</h3>
+            <p>An intelligent driver-safety concept designed to improve road safety by monitoring driver attention, detecting potentially unsafe states, and verifying driver presence during driving.</p>
+            <ul><li>Driver attention monitoring</li><li>Safety-oriented detection and alerts</li><li>Driver presence verification</li><li>Designed around a real-world accident-reduction problem</li></ul>
+            <div class="project-bottom"><div class="chips"><span class="chip">AI</span><span class="chip">Computer Vision</span><span class="chip">Driver Monitoring</span></div></div>
+          </article>
+          <article class="project reveal">
+            <div class="tag">Software Engineering</div>
+            <h3>Hospital Management System</h3>
+            <p>A team software-engineering project focused on organizing hospital operations through requirements analysis, user roles, permissions, workflows and documentation.</p>
+            <ul><li>Requirements analysis</li><li>User roles & access permissions</li><li>UI prototypes & workflows</li><li>Team-based software development</li></ul>
+            <div class="project-bottom"><div class="chips"><span class="chip">Software Engineering</span><span class="chip">System Analysis</span></div></div>
+          </article>
+          <article class="project reveal">
+            <div class="tag">Backend / Database</div>
+            <h3>Clinic Management & Booking System</h3>
+            <p>A clinic-oriented system designed to simplify appointment booking and organize clinic-related information through a structured software workflow.</p>
+            <ul><li>Appointment management</li><li>Booking and scheduling</li><li>Database-driven workflow</li></ul>
+            <div class="project-bottom"><div class="chips"><span class="chip">Backend</span><span class="chip">Database</span><span class="chip">Software</span></div></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="education">
+      <div class="container">
+        <div class="section-head reveal"><div><div class="kicker">04 / Education</div><h2>Learning & training.</h2></div><p>Academic foundations supported by practical technical training.</p></div>
+        <div class="timeline">
+          <div class="timeline-card reveal"><small>2024 — Present</small><h3>Bachelor of Computer Science and Artificial Intelligence</h3><p>Zagazig University, Egypt · Third-Year Student · GPA: 3.5 / 4.0</p></div>
+          <div class="timeline-card reveal"><small>Professional Training</small><h3>Digital Egypt Pioneers Initiative (DEPI)</h3><p>Ministry of Communications and Information Technology (MCIT).</p></div>
+          <div class="timeline-card reveal"><small>Technical Training</small><h3>Egyptian Russian University</h3><p>Completed professional training in Artificial Intelligence and Data Science, gaining hands-on expertise in data analysis, machine learning algorithms, and turning complex datasets into intelligent, actionable insights.</p></div>
+          <div class="timeline-card reveal"><small>Technical Training</small><h3>Cisco</h3><p>Completed a comprehensive program covering Data Science, professional English, and essential freelancing skills.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container contact">
+        <div class="contact-main reveal">
+          <div class="kicker">05 / Contact</div>
+          <h2>Let’s build something useful.</h2>
+          <p>I’m open to internships, collaborative projects, and opportunities in AI, Data Science, Computer Vision, and Software Engineering.</p>
+          <div class="buttons">
+            <a class="btn primary" href="mailto:evanradwan9@outlook.com">Email Me ↗</a>
+            <a class="btn primary" href="https://github.com/erfanbkradwan-gif" target="_blank">GitHub ↗</a>
+            <a class="btn primary" href="https://www.linkedin.com/in/erfan-radwan-41b108322" target="_blank">LinkedIn ↗</a>
+          </div>
+        </div>
+        <div class="contact-list reveal">
+          <div class="contact-item"><span>Email</span>evanradwan9@outlook.com</div>
+          <div class="contact-item"><span>Phone</span>+20 114 131 6094</div>
+          <div class="contact-item"><span>Location</span>Egypt</div>
+          <div class="contact-item"><span>GitHub</span>github.com/erfanbkradwan-gif</div>
+          <div class="contact-item"><span>LinkedIn</span>linkedin.com/in/erfan-radwan-41b108322</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="container footer-inner"><span>© 2026 Erfan Ahmed Mohamed Ahmed</span><span>Designed & built for AI, software and real-world problem solving.</span></div></footer>
+
+  <script>
+    const menuBtn=document.getElementById('menuBtn'), navLinks=document.getElementById('navLinks');
+    menuBtn.addEventListener('click',()=>navLinks.classList.toggle('open'));
+    document.querySelectorAll('.links a').forEach(a=>a.addEventListener('click',()=>navLinks.classList.remove('open')));
+    const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.12});
+    document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+  </script>
+</body>
+</html>
